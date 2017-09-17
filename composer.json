@@ -12,5 +12,10 @@
             "name": "Vítor Brandão",
             "email": "vitor@noiselabs.io"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Noiselabs\\Behat\\ZfTestCaseExtension\\": "src"
+        }
+    }
 }
