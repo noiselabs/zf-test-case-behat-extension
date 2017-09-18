@@ -1,7 +1,7 @@
 # Zf Test Case Behat Extension
 
 [![Build Status](https://travis-ci.org/noiselabs/zf-test-case-behat-extension.svg)](https://travis-ci.org/noiselabs/zf-test-case-behat-extension)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/noiselabs/zf-test-case-behat-extension/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/noiselabs/zf-test-case-behat-extension/?branch=master)atu
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/noiselabs/zf-test-case-behat-extension/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/noiselabs/zf-test-case-behat-extension/?branch=master)
 
 Integration testing for ZF MVC applications in Behat by exposing Zend\Test classes (originally built for PHPUnit).
 
