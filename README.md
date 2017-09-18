@@ -1,5 +1,8 @@
 # Zf Test Case Behat Extension
 
+[![Build Status](https://travis-ci.org/noiselabs/zf-test-case-behat-extension.svg)](https://travis-ci.org/noiselabs/zf-test-case-behat-extension)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/noiselabs/zf-test-case-behat-extension/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/noiselabs/zf-test-case-behat-extension/?branch=master)atu
+
 Integration testing for ZF MVC applications in Behat by exposing Zend\Test classes (originally built for PHPUnit).
 
 Installation
@@ -32,9 +35,9 @@ Implement `ZfTestCaseAwareContext` or extend `ZfTestCaseContext`:
 ```php
 <?php
 
+use Album\Controller\AlbumController;
 use Noiselabs\Behat\ZfTestCaseExtension\Context\ZfTestCaseAwareContext;
 use Noiselabs\Behat\ZfTestCaseExtension\TestCase\HttpControllerTestCase;
-use Album\Controller\AlbumController;
 
 class MyContext implements ZfTestCaseAwareContext
 {
@@ -43,9 +46,6 @@ class MyContext implements ZfTestCaseAwareContext
      */
     private $testCase;
 
-    /**
-     * @param HttpControllerTestCase $testCase
-     */
     public function setTestCase(HttpControllerTestCase $testCase)
     {
         $this->testCase = $testCase;

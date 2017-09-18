@@ -2,9 +2,16 @@
     "name": "noiselabs/zf-test-case-behat-extension",
     "description": "Integration testing for ZF MVC applications in Behat by exposing Zend\\Test classes (originally built for PHPUnit)",
     "type": "behat-extension",
+    "config": {
+        "sort-packages": true
+    },
     "require": {
-        "behat/behat": "~3.0",
+        "php": "^5.5 || ^7.0",
+        "behat/behat": "^3.0",
         "zendframework/zend-test": "^2.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=4.8"
     },
     "license": "MIT",
     "authors": [
@@ -16,6 +23,11 @@
     "autoload": {
         "psr-4": {
             "Noiselabs\\Behat\\ZfTestCaseExtension\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Noiselabs\\Behat\\ZfTestCaseExtensionTest\\": "tests"
         }
     }
 }
