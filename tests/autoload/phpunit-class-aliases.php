@@ -9,7 +9,16 @@
  */
 
 use PHPUnit\Framework\Assert;
+use PHPUnit\Framework\TestCase;
+
+if (file_exists(__DIR__ . '/../../vendor/zendframework/zend-test/autoload/phpunit-class-aliases.php')) {
+    require __DIR__ . '/../../vendor/zendframework/zend-test/autoload/phpunit-class-aliases.php';
+}
 
 if (!class_exists(Assert::class)) {
     class_alias(\PHPUnit_Framework_Assert::class, Assert::class);
+}
+
+if (!class_exists(TestCase::class)) {
+    class_alias(\PHPUnit_Framework_TestCase::class, TestCase::class);
 }

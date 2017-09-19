@@ -13,12 +13,12 @@ namespace Noiselabs\Behat\ZfTestCaseExtensionTest\Context\Initializer;
 use Noiselabs\Behat\ZfTestCaseExtension\Context\Initializer\ZfTestCaseAwareInitializer;
 use Noiselabs\Behat\ZfTestCaseExtension\Context\ZfTestCaseContext;
 use Noiselabs\Behat\ZfTestCaseExtension\TestCase\HttpControllerTestCase;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @group unit
  */
-class ZfTestCaseAwareInitializerTest extends PHPUnit_Framework_TestCase
+class ZfTestCaseAwareInitializerTest extends TestCase
 {
     public function test_it_can_initialize_the_context()
     {
@@ -26,5 +26,6 @@ class ZfTestCaseAwareInitializerTest extends PHPUnit_Framework_TestCase
         $initializer = new ZfTestCaseAwareInitializer(new HttpControllerTestCase());
 
         $initializer->initializeContext($context);
+        $this->addToAssertionCount(1);
     }
 }

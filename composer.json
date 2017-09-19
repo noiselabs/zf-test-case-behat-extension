@@ -34,7 +34,6 @@
     },
     "autoload-dev": {
         "files": [
-            "vendor/zendframework/zend-test/autoload/phpunit-class-aliases.php",
             "tests/autoload/phpunit-class-aliases.php"
         ],
         "psr-4": {

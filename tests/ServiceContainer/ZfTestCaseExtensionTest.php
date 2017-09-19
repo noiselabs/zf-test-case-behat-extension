@@ -14,14 +14,14 @@ use Behat\Testwork\ServiceContainer\Configuration\ConfigurationTree;
 use Noiselabs\Behat\ZfTestCaseExtension\Context\Initializer\ZfTestCaseAwareInitializer;
 use Noiselabs\Behat\ZfTestCaseExtension\ServiceContainer\ZfTestCaseExtension;
 use Noiselabs\Behat\ZfTestCaseExtension\TestCase\HttpControllerTestCase;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
  * @group integration
  */
-class ZfTestCaseExtensionTest extends PHPUnit_Framework_TestCase
+class ZfTestCaseExtensionTest extends TestCase
 {
     /**
      * @var ContainerBuilder
