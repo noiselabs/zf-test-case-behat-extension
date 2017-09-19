@@ -7,11 +7,14 @@ Feature: Using the ZF Test Case
     Given there is a file named "app/config/application.config.php" with:
     """
     <?php
-    return [
-        'modules' => [
-            'Zend\Router',
-            'Application',
-        ],
+    $modules = [];
+    if (class_exists('Zend\Router\Module')) {
+        $modules[] = 'Zend\Router';
+    }
+    $modules[] = 'Application';
+
+    $config = [
+        'modules' => $modules,
         'module_listener_options' => [
             'module_paths' => [
                 __DIR__.'/../modules',
@@ -22,6 +25,10 @@ Feature: Using the ZF Test Case
             'config/autoload/{,*.}{global,local}.php',
         ],
     ];
+
+
+
+    return $config;
     """
     And there is a file named "app/modules/Application/config/module.config.php" with:
     """
@@ -32,7 +39,7 @@ Feature: Using the ZF Test Case
         'router' => [
             'routes' => [
                 'album' => [
-                    'type' => \Zend\Router\Http\Literal::class,
+                    'type' => 'literal',
                     'options' => [
                         'route'    => '/album',
                         'defaults' => [
