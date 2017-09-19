@@ -8,10 +8,17 @@
     "require": {
         "php": "^5.5 || ^7.0",
         "behat/behat": "^3.0",
-        "zendframework/zend-test": "^2.3"
+        "zendframework/zend-test": "~2.3|~3.0"
     },
     "require-dev": {
-        "phpunit/phpunit": ">=4.8"
+        "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0",
+        "symfony/process": "~2.1|~3.0",
+        "zendframework/zend-i18n": "~2.3|~3.0",
+        "zendframework/zend-log": "~2.3|~3.0",
+        "zendframework/zend-modulemanager": "~2.3|~3.0",
+        "zendframework/zend-mvc": "~2.3|~3.0",
+        "zendframework/zend-router": "~2.3|~3.0",
+        "zendframework/zend-serializer": "~2.3|~3.0"
     },
     "license": "MIT",
     "authors": [
@@ -26,6 +33,10 @@
         }
     },
     "autoload-dev": {
+        "files": [
+            "vendor/zendframework/zend-test/autoload/phpunit-class-aliases.php",
+            "tests/autoload/phpunit-class-aliases.php"
+        ],
         "psr-4": {
             "Noiselabs\\Behat\\ZfTestCaseExtensionTest\\": "tests"
         }
